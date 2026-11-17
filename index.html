@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELIA M&A PARTNERS | 経営の未来を繋ぐM&Aアドバイザリー</title>
+  <meta name="description" content="企業の持続的成長と円滑な事業承継を実現する、独立系M&Aブティック・アドバイザリーファーム。">
+  
+  <!-- Google Fonts: 高級感と信頼性を演出する明朝体とサンセリフ体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#060C16',
+              900: '#0A1322',
+              800: '#101D33',
+              700: '#192B49',
+            },
+            gold: {
+              300: '#E2C896',
+              400: '#C5A467',
+              500: '#A88649',
+            }
+          },
+          fontFamily: {
+            serif: ['"Shippori Mincho"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            en: ['"Cormorant Garamond"', 'serif'],
+          },
+          letterSpacing: {
+            widest: '.2em',
+            ultra: '.3em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #060C16;
+      color: #F4F5F7;
+      font-family: "Noto Sans JP", sans-serif;
+      line-height: 2.0;
+      letter-spacing: 0.06em;
+    }
+    .font-mincho {
+      font-family: "Shippori Mincho", serif;
+    }
+    .font-cormorant {
+      font-family: "Cormorant Garamond", serif;
+    }
+    .hero-overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(6, 12, 22, 0.72) 0%,
+        rgba(6, 12, 22, 0.55) 45%,
+        rgba(6, 12, 22, 0.88) 85%,
+        #060C16 100%
+      );
+    }
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(197,164,103,0) 0%, rgba(197,164,103,0.7) 50%, rgba(197,164,103,0) 100%);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold-400 selection:text-navy-950">
+
+  <!-- ヘッダーナビゲーション -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-navy-950/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 md:h-24 flex items-center justify-between">
+      <a href="#" class="flex flex-col group">
+        <span class="font-cormorant text-2xl md:text-3xl tracking-widest text-white font-semibold">AURELIA</span>
+        <span class="text-[10px] tracking-ultra text-gold-400 uppercase mt-0.5">M&amp;A Advisory Partners</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-10 text-sm tracking-widest text-gray-300">
+        <a href="#philosophy" class="hover:text-gold-400 transition-colors">企業理念</a>
+        <a href="#service" class="hover:text-gold-400 transition-colors">事業内容</a>
+        <a href="#officer" class="hover:text-gold-400 transition-colors">役員紹介</a>
+        <a href="#company" class="hover:text-gold-400 transition-colors">会社概要</a>
+        <a href="#contact" class="ml-4 px-7 py-3 border border-gold-400 text-gold-400 hover:bg-gold-400 hover:text-navy-950 transition-all duration-300 text-xs tracking-widest">
+          無料相談・お問い合わせ
+        </a>
+      </nav>
+
+      <button id="menu-btn" class="lg:hidden text-white focus:outline-none p-2" aria-label="メニューを開く">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-navy-900 border-b border-white/10 px-6 py-8">
+      <nav class="flex flex-col space-y-6 text-center text-sm tracking-widest text-gray-200">
+        <a href="#philosophy" class="mobile-link hover:text-gold-400 py-1">企業理念</a>
+        <a href="#service" class="mobile-link hover:text-gold-400 py-1">事業内容</a>
+        <a href="#officer" class="mobile-link hover:text-gold-400 py-1">役員紹介</a>
+        <a href="#company" class="mobile-link hover:text-gold-400 py-1">会社概要</a>
+        <div class="pt-4">
+          <a href="#contact" class="mobile-link inline-block w-full py-4 bg-gold-400 text-navy-950 font-medium tracking-widest">
+            無料相談・お問い合わせ
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ファーストビュー（夜景背景） -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=2000&q=85" 
+        alt="東京の夜景" 
+        class="w-full h-full object-cover object-center scale-105"
+      >
+      <div class="absolute inset-0 hero-overlay"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center py-24">
+      <p class="font-cormorant text-gold-400 text-base md:text-lg tracking-ultra uppercase mb-6">
+        Succession &amp; Corporate Strategy
+      </p>
+      <h1 class="font-mincho text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-medium text-white leading-[1.6] md:leading-[1.55] tracking-wider mb-10">
+        経営者の想いを、<br class="sm:hidden">次の百年へ繋ぐ。<br>
+        一社一社に寄り添う<br class="sm:hidden">最高水準のM&amp;A。
+      </h1>
+      <p class="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-[2.2] font-light mb-14">
+        単なる資本提携ではなく、創業から築き上げた歴史・社員の未来・企業の誇りを尊重し、<br class="hidden md:inline">
+        双方にとって最良の決断となるディールを誠実にプロデュースいたします。
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+        <a href="#contact" class="w-full sm:w-auto px-10 py-4 bg-gold-400 text-navy-950 font-medium text-sm tracking-widest hover:bg-gold-300 transition-all duration-300">
+          経営相談を予約する（秘密厳守）
+        </a>
+        <a href="#officer" class="w-full sm:w-auto px-10 py-4 border border-white/30 text-white text-sm tracking-widest hover:border-gold-400 hover:text-gold-400 transition-all duration-300">
+          経営陣・役員紹介を見る
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
+      <span class="font-cormorant text-xs tracking-ultra text-gold-400 uppercase mb-2">Scroll</span>
+      <div class="w-[1px] h-12 bg-gradient-to-b from-gold-400 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- 企業理念・3つの約束 -->
+  <section id="philosophy" class="py-28 md:py-40 bg-navy-950 relative">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-24">
+        <span class="font-cormorant text-gold-400 text-sm tracking-ultra uppercase block mb-3">Philosophy</span>
+        <h2 class="font-mincho text-2xl md:text-4xl text-white tracking-wider mb-8">私たちが選ばれ続ける理由</h2>
+        <div class="gold-line w-24 mx-auto mb-8"></div>
+        <p class="text-gray-300 text-sm md:text-base leading-[2.2] font-light">
+          M&amp;Aは経営者にとって人生最大の意思決定です。<br>
+          私たちは件数やスピードのみを追求する画一的な仲介ではなく、<br class="hidden md:inline">
+          5つ星ホテルのコンシェルジュのように一人ひとりの経営課題に深く寄り添います。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+        <div class="bg-navy-900/70 border border-white/10 p-10 md:p-12 hover:border-gold-400/50 transition-colors duration-500">
+          <span class="font-cormorant text-4xl text-gold-400 italic block mb-6">01</span>
+          <h3 class="font-mincho text-xl text-white mb-6 leading-relaxed">
+            経験豊富な専門役員による<br>一貫した専任担当制
+          </h3>
+          <p class="text-gray-400 text-sm leading-[2.1] font-light">
+            初回のご相談から企業価値算定、相手先選定、条件交渉、最終契約の締結に至るまで、公認会計士・大手証券出身などの精鋭アドバイザーが一貫して担当いたします。
+          </p>
+        </div>
+
+        <div class="bg-navy-900/70 border border-white/10 p-10 md:p-12 hover:border-gold-400/50 transition-colors duration-500">
+          <span class="font-cormorant text-4xl text-gold-400 italic block mb-6">02</span>
+          <h3 class="font-mincho text-xl text-white mb-6 leading-relaxed">
+            成約をゴールとしない<br>本質的なマッチング品質
+          </h3>
+          <p class="text-gray-400 text-sm leading-[2.1] font-light">
+            譲渡対価の最大化はもちろん、譲渡後の従業員の雇用維持、取引先との関係継続、企業文化の融合（PMI）までを見据え、真にシナジーが生まれる提携先のみをご提案します。
+          </p>
+        </div>
+
+        <div class="bg-navy-900/70 border border-white/10 p-10 md:p-12 hover:border-gold-400/50 transition-colors duration-500">
+          <span class="font-cormorant text-4xl text-gold-400 italic block mb-6">03</span>
+          <h3 class="font-mincho text-xl text-white mb-6 leading-relaxed">
+            完全成功報酬型の料金体系と<br>徹底した秘密保持体制
+          </h3>
+          <p class="text-gray-400 text-sm leading-[2.1] font-light">
+            着手金・中間金は一切いただかず、最終契約の完了まで費用は発生いたしません。また、情報漏洩リスクを極限まで排除した厳格なセキュリティ体制で進行します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 事業内容 -->
+  <section id="service" class="py-28 md:py-40 bg-navy-900 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
+        <div>
+          <span class="font-cormorant text-gold-400 text-sm tracking-ultra uppercase block mb-3">Services</span>
+          <h2 class="font-mincho text-2xl md:text-4xl text-white tracking-wider">事業内容</h2>
+        </div>
+        <p class="text-gray-400 text-sm mt-4 md:mt-0 max-w-md leading-[2.0]">
+          事業承継から成長戦略型M&amp;A、資本業務提携まで、経営フェーズに応じた最適なソリューションを提供します。
+        </p>
+      </div>
+
+      <div class="space-y-10">
+        <div class="bg-navy-950/80 border border-white/10 p-8 md:p-14 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
+          <div class="lg:w-1/3">
+            <span class="text-xs text-gold-400 tracking-widest block mb-2">SERVICE 01</span>
+            <h3 class="font-mincho text-xl md:text-2xl text-white">事業承継型M&amp;Aアドバイザリー</h3>
+          </div>
+          <div class="lg:w-2/3">
+            <p class="text-gray-300 text-sm md:text-base leading-[2.1] font-light">
+              後継者不在でお悩みのオーナー経営者様に対し、大切な会社と従業員を守るための第三者承継を支援します。創業者利益の確保と、信頼できるパートナー企業への円滑なバトンタッチを実現します。
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-navy-950/80 border border-white/10 p-8 md:p-14 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
+          <div class="lg:w-1/3">
+            <span class="text-xs text-gold-400 tracking-widest block mb-2">SERVICE 02</span>
+            <h3 class="font-mincho text-xl md:text-2xl text-white">成長戦略・クロスボーダーM&amp;A</h3>
+          </div>
+          <div class="lg:w-2/3">
+            <p class="text-gray-300 text-sm md:text-base leading-[2.1] font-light">
+              新規事業領域への参入、シェア拡大、海外市場への展開を目指す企業様へ、買収戦略の立案からターゲット企業のソーシング、デューデリジェンス支援、条件交渉まで一気通貫で伴走します。
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-navy-950/80 border border-white/10 p-8 md:p-14 flex flex-col lg:flex-row gap-8 lg:gap-16 items-start lg:items-center">
+          <div class="lg:w-1/3">
+            <span class="text-xs text-gold-400 tracking-widest block mb-2">SERVICE 03</span>
+            <h3 class="font-mincho text-xl md:text-2xl text-white">企業価値評価・資本政策コンサルティング</h3>
+          </div>
+          <div class="lg:w-2/3">
+            <p class="text-gray-300 text-sm md:text-base leading-[2.1] font-light">
+              将来のM&amp;AやIPOを見据えた企業価値の算定（バリュエーション）、事業ポートフォリオの再編、グループ内組織再編など、中長期的な企業価値向上に向けた財務戦略を策定します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 役員紹介 -->
+  <section id="officer" class="py-28 md:py-40 bg-navy-950">
+    <div class="max-w-6xl mx-auto px-6 md:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-24">
+        <span class="font-cormorant text-gold-400 text-sm tracking-ultra uppercase block mb-3">Executive Officers</span>
+        <h2 class="font-mincho text-2xl md:text-4xl text-white tracking-wider mb-8">役員紹介</h2>
+        <div class="gold-line w-24 mx-auto mb-8"></div>
+        <p class="text-gray-300 text-sm md:text-base leading-[2.1] font-light">
+          金融・会計・法務の第一線で豊富な実績を積んだ経営陣が、<br class="hidden md:inline">
+          日本の産業発展と経営者の決断に全責任を持って向き合います。
+        </p>
+      </div>
+
+      <div class="bg-navy-900/60 border border-white/10 p-8 md:p-16 mb-20">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+          <div class="w-full sm:w-2/3 lg:w-5/12">
+            <div class="aspect-[4/5] overflow-hidden bg-navy-800 border border-white/10">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85" 
+                alt="代表取締役社長 佐藤 健一" 
+                class="w-full h-full object-cover object-top"
+              >
+            </div>
+          </div>
+          <div class="w-full lg:w-7/12">
+            <p class="text-gold-400 text-xs md:text-sm tracking-widest mb-2">代表取締役社長</p>
+            <h3 class="font-mincho text-2xl md:text-3xl text-white tracking-wider mb-1">佐藤 健一</h3>
+            <p class="font-cormorant text-gray-400 text-sm tracking-widest uppercase mb-8">Kenichi Sato</p>
+            
+            <div class="gold-line w-full mb-8"></div>
+
+            <p class="text-gray-300 text-sm md:text-base leading-[2.2] font-light mb-8">
+              大手都市銀行にて法人営業およびM&amp;Aアドバイザリー業務に従事した後、独立系M&amp;A仲介会社の立ち上げに参画。これまで製造業・IT・建設・医療など幅広い業界において、累計120件以上の成約を統括。<br>
+              「日本の中堅・中小企業が持つ卓越した技術と想いを、次の時代へ繋ぐことが私たちの使命です。誠実さとプロフェッショナリズムを何よりも重んじ、経営者様の生涯のパートナーであり続けます。」
+            </p>
+
+            <div class="bg-navy-950/60 p-6 border-l-2 border-gold-400">
+              <p class="text-xs text-gray-400 leading-[2.0]">
+                【略歴】<br>
+                東京大学経済学部卒業。大手都市銀行、外資系投資銀行を経て、2018年にAURELIA M&amp;A PARTNERS株式会社を設立し代表取締役に就任。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="group">
+          <div class="aspect-[4/5] overflow-hidden bg-navy-800 border border-white/10 mb-6">
+            <img 
+              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=85" 
+              alt="取締役副社長 高橋 誠" 
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+            >
+          </div>
+          <p class="text-gold-400 text-xs tracking-widest mb-1">取締役副社長 / 公認会計士</p>
+          <h4 class="font-mincho text-xl text-white mb-1">高橋 誠</h4>
+          <p class="font-cormorant text-gray-400 text-xs tracking-widest uppercase mb-5">Makoto Takahashi</p>
+          <p class="text-gray-400 text-xs md:text-sm leading-[2.0] font-light">
+            大手監査法人にて上場企業の法定監査および財務デューデリジェンス、バリュエーション業務を統括。難解なスキーム構築や事業再生型M&amp;Aに多数の実績を持つ。
+          </p>
+        </div>
+
+        <div class="group">
+          <div class="aspect-[4/5] overflow-hidden bg-navy-800 border border-white/10 mb-6">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85" 
+              alt="取締役 藤原 沙織" 
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+            >
+          </div>
+          <p class="text-gold-400 text-xs tracking-widest mb-1">取締役 戦略アドバイザリー本部長</p>
+          <h4 class="font-mincho text-xl text-white mb-1">藤原 沙織</h4>
+          <p class="font-cormorant text-gray-400 text-xs tracking-widest uppercase mb-5">Saori Fujiwara</p>
+          <p class="text-gray-400 text-xs md:text-sm leading-[2.0] font-light">
+            大手証券会社投資銀行部門にてクロスボーダーM&amp;Aおよび資本業務提携を推進。IT・ヘルスケア・消費財領域における成長戦略型M&amp;Aを牽引。
+          </p>
+        </div>
+
+        <div class="group">
+          <div class="aspect-[4/5] overflow-hidden bg-navy-800 border border-white/10 mb-6">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=85" 
+              alt="社外取締役 渡辺 隆" 
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+            >
+          </div>
+          <p class="text-gold-400 text-xs tracking-widest mb-1">社外取締役 / 弁護士</p>
+          <h4 class="font-mincho text-xl text-white mb-1">渡辺 隆</h4>
+          <p class="font-cormorant text-gray-400 text-xs tracking-widest uppercase mb-5">Takashi Watanabe</p>
+          <p class="text-gray-400 text-xs md:text-sm leading-[2.0] font-light">
+            大手渉外法律事務所のパートナー弁護士として、数多くの企業買収・組織再編・コーポレートガバナンス案件を手掛ける。当社のコンプライアンス体制を監督。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 会社概要 -->
+  <section id="company" class="py-28 md:py-40 bg-navy-900 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6 md:px-12">
+      <div class="text-center mb-20">
+        <span class="font-cormorant text-gold-400 text-sm tracking-ultra uppercase block mb-3">Corporate Profile</span>
+        <h2 class="font-mincho text-2xl md:text-4xl text-white tracking-wider">会社概要</h2>
+      </div>
+
+      <dl class="border-t border-white/15 divide-y divide-white/15 text-sm md:text-base">
+        <div class="py-7 flex flex-col sm:flex-row">
+          <dt class="sm:w-1/3 text-gold-400 font-medium mb-2 sm:mb-0">商号</dt>
+          <dd class="sm:w-2/3 text-gray-200">AURELIA M&amp;A PARTNERS株式会社</dd>
+        </div>
+        <div class="py-7 flex flex-col sm:flex-row">
+          <dt class="sm:w-1/3 text-gold-400 font-medium mb-2 sm:mb-0">所在地</dt>
+          <dd class="sm:w-2/3 text-gray-200">〒100-0005 東京都千代田区丸の内1-1-1 パレスビル 22F</dd>
+        </div>
+        <div class="py-7 flex flex-col sm:flex-row">
+          <dt class="sm:w-1/3 text-gold-400 font-medium mb-2 sm:mb-0">設立</dt>
+          <dd class="sm:w-2/3 text-gray-200">2018年4月</dd>
+        </div>
+        <div class="py-7 flex flex-col sm:flex-row">
+          <dt class="sm:w-1/3 text-gold-400 font-medium mb-2 sm:mb-0">資本金</dt>
+          <dd class="sm:w-2/3 text-gray-200">1億円</dd>
+        </div>
+        <div class="py-7 flex flex-col sm:flex-row">
+          <dt class="sm:w-1/3 text-gold-400 font-medium mb-2 sm:mb-0">役員</dt>
+          <dd class="sm:w-2/3 text-gray-200 leading-[2.0]">
+            代表取締役社長　佐藤 健一<br>
+            取締役副社長　高橋 誠<br>
+            取締役　藤原 沙織<br>
+            社外取締役　渡辺 隆
+          </dd>
+        </div>
+        <div class="py-7 flex flex-col sm:flex-row">
+          <dt class="sm:w-1/3 text-gold-400 font-medium mb-2 sm:mb-0">事業内容</dt>
+          <dd class="sm:w-2/3 text-gray-200 leading-[2.0]">
+            ・M&amp;A仲介およびアドバイザリー業務<br>
+            ・事業承継コンサルティング業務<br>
+            ・企業価値評価（バリュエーション）および資本政策支援
+          </dd>
+        </div>
+        <div class="py-7 flex flex-col sm:flex-row">
+          <dt class="sm:w-1/3 text-gold-400 font-medium mb-2 sm:mb-0">登録・加盟団体</dt>
+          <dd class="sm:w-2/3 text-gray-200">中小企業庁「M&amp;A支援機関登録制度」登録機関</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- お問い合わせフォーム -->
+  <section id="contact" class="py-28 md:py-40 bg-navy-950 relative border-t border-white/10">
+    <div class="max-w-3xl mx-auto px-6 md:px-12">
+      <div class="text-center mb-16">
+        <span class="font-cormorant text-gold-400 text-sm tracking-ultra uppercase block mb-3">Contact</span>
+        <h2 class="font-mincho text-2xl md:text-4xl text-white tracking-wider mb-6">無料経営相談・お問い合わせ</h2>
+        <p class="text-gray-300 text-sm md:text-base leading-[2.1] font-light">
+          ご相談内容および貴社情報は、秘密保持契約（NDA）に準拠し厳重に管理いたします。<br>
+          具体的な検討前段階での情報収集や、企業価値の簡易算定も承っております。
+        </p>
+      </div>
+
+      <form id="contact-form" class="bg-navy-900/80 border border-white/10 p-8 md:p-14 space-y-8">
+        <div>
+          <label class="block text-xs text-gold-400 tracking-widest mb-3">ご相談種別 <span class="text-red-400">*</span></label>
+          <select required class="w-full bg-navy-950 border border-white/20 text-white px-4 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors">
+            <option value="">選択してください</option>
+            <option value="sell">株式譲渡・事業承継（売却）のご相談</option>
+            <option value="buy">事業拡大・M&amp;A（買収）のご相談</option>
+            <option value="valuation">企業価値算定・資本政策のご相談</option>
+            <option value="other">その他のお問い合わせ</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <label class="block text-xs text-gold-400 tracking-widest mb-3">貴社名 <span class="text-red-400">*</span></label>
+            <input type="text" required placeholder="例：株式会社〇〇" class="w-full bg-navy-950 border border-white/20 text-white px-4 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors">
+          </div>
+          <div>
+            <label class="block text-xs text-gold-400 tracking-widest mb-3">お名前・お役職 <span class="text-red-400">*</span></label>
+            <input type="text" required placeholder="例：代表取締役 山田 太郎" class="w-full bg-navy-950 border border-white/20 text-white px-4 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <label class="block text-xs text-gold-400 tracking-widest mb-3">メールアドレス <span class="text-red-400">*</span></label>
+            <input type="email" required placeholder="example@company.co.jp" class="w-full bg-navy-950 border border-white/20 text-white px-4 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors">
+          </div>
+          <div>
+            <label class="block text-xs text-gold-400 tracking-widest mb-3">お電話番号</label>
+            <input type="tel" placeholder="03-0000-0000" class="w-full bg-navy-950 border border-white/20 text-white px-4 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs text-gold-400 tracking-widest mb-3">ご相談内容</label>
+          <textarea rows="5" placeholder="現在検討されている内容や、ご希望の面談方法（オンライン・ご来社・ご訪問）などをご記入ください。" class="w-full bg-navy-950 border border-white/20 text-white px-4 py-4 text-sm focus:outline-none focus:border-gold-400 transition-colors"></textarea>
+        </div>
+
+        <div class="pt-4 text-center">
+          <button type="submit" class="w-full sm:w-80 py-4 bg-gold-400 text-navy-950 font-medium text-sm tracking-widest hover:bg-gold-300 transition-all duration-300">
+            この内容で送信する
+          </button>
+        </div>
+
+        <div id="form-success" class="hidden p-6 bg-navy-950 border border-gold-400 text-center text-sm text-gold-300 leading-relaxed">
+          お問い合わせありがとうございます。<br>
+          内容を確認の上、専任の役員・アドバイザーより1営業日以内にご連絡申し上げます。
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-navy-950 border-t border-white/10 py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="text-center md:text-left">
+        <p class="font-cormorant text-2xl tracking-widest text-white font-semibold">AURELIA</p>
+        <p class="text-[10px] tracking-ultra text-gold-400 uppercase mt-1">M&amp;A Advisory Partners</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 text-xs text-gray-400 tracking-widest">
+        <a href="#philosophy" class="hover:text-gold-400 transition-colors">企業理念</a>
+        <a href="#service" class="hover:text-gold-400 transition-colors">事業内容</a>
+        <a href="#officer" class="hover:text-gold-400 transition-colors">役員紹介</a>
+        <a href="#company" class="hover:text-gold-400 transition-colors">会社概要</a>
+        <a href="#contact" class="hover:text-gold-400 transition-colors">お問い合わせ</a>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-white/5 text-center md:text-right">
+      <p class="text-xs text-gray-500 tracking-wider">&copy; AURELIA M&amp;A PARTNERS Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formSuccess.classList.remove('hidden');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
